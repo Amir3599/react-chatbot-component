@@ -1,0 +1,72 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  position: fixed;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  width: 200px;
+  min-height: 350px;
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.messages-container {
+  background-color: red;
+  flex-grow: 1;
+  padding-left: 8px;
+  padding-right: 8px;
+  overflow-y: scroll;
+  max-height: 300px;
+}
+
+.container-header {
+  background-color: blue;
+}
+
+.exit-btn {
+}
+
+.icon-btn {
+}
+
+.messages-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.messages-default {
+  width: 50%;
+  background-color: burlywood;
+  margin-top: 8px;
+  padding: 0 8px 0 8px;
+  border: 1px solid gray;
+}
+
+.recived-msg {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.sender-msg {
+  align-self: flex-end;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
