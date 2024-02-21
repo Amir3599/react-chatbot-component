@@ -13,16 +13,17 @@
   position: fixed;
   opacity: 0;
   animation: fadeIn 1s ease forwards;
-  width: 200px;
+  width: 250px;
   min-height: 350px;
-  background-color: beige;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px grey;
 }
 
 .messages-container {
-  background-color: red;
   flex-grow: 1;
   padding-left: 8px;
   padding-right: 8px;
@@ -31,37 +32,55 @@
 }
 
 .container-header {
-  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: antiquewhite;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: small;
+  color: grey;
 }
 
 .exit-btn {
+  background-color: transparent;
+  border-radius: 100%;
+  padding: 4px;
+  width: 30px;
 }
 
 .icon-btn {
+  font-size: large;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
 }
 
 .messages-container {
   display: flex;
   flex-direction: column;
+  background-color: whitesmoke;
 }
 
 .input-container {
   display: flex;
   justify-content: space-between;
+  padding: 8px;
+  border-top: 1px solid grey;
 }
 
 .messages-default {
   width: 50%;
-  background-color: burlywood;
   margin-top: 8px;
   padding: 0 8px 0 8px;
-  border: 1px solid gray;
 }
 
 .recived-msg {
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border: 1px solid lightgreen;
+  box-shadow: 3px 3px 5px lightgreen
 }
 
 .sender-msg {
@@ -69,4 +88,19 @@
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
+  border: 1px solid lightblue;
+  box-shadow: 3px 3px 5px lightblue;
+}
+
+.send-btn{
+  background-color: transparent;
+  border: 1px solid grey;
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+}
+
+.input{
+  border: 0px;
+  outline: none;
 }

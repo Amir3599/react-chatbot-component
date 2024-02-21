@@ -4,7 +4,11 @@ import ChatBot from "./components/chatbot";
 function App() {
   return (
     <div>
-      <ChatBot position="bottom-right" Icon={<div>123</div>}/>
+      <ChatBot
+        greetingMessage="Greeting"
+        position="bottom-right"
+        Icon={<div>123</div>}
+      />
     </div>
   );
 }

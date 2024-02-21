@@ -11,6 +11,7 @@ export type PositionType =
 
 export type IChatBotCompProps = {
   position: PositionType;
+  greetingMessage: string;
   containerClassName?: string;
   containerStyle?: React.CSSProperties;
   iconScale?: number;
@@ -18,6 +19,8 @@ export type IChatBotCompProps = {
   inputStyle?: React.CSSProperties;
   Icon?: React.ReactNode;
   sendBtnIcon?: React.ReactNode;
+  sendBtnClassName?: string;
+  sendBtnStyle?: React.CSSProperties;
   exitIcon?: React.ReactNode;
   senderMessagesClassName?: string;
   senderMessagesStyle?: React.CSSProperties;
@@ -35,4 +38,5 @@ export type IChatBotCompProps = {
   iconBtnStyle?: React.CSSProperties;
   inputContainerStyle?: React.CSSProperties;
   inputContainerClassName?: string;
+  inputPlaceHolder?: string;
 };

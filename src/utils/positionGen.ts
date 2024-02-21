@@ -16,12 +16,12 @@ export const generateIconPos = (pos: PositionType) => {
 export const generateContainerPos = (pos: PositionType) => {
   switch (pos) {
     case "top-left":
-      return { top: 48, left: 48, bottom: undefined, right: undefined };
+      return { top: 64, left: 64, bottom: undefined, right: undefined };
     case "top-right":
-      return { top: 48, left: undefined, bottom: undefined, right: 48 };
+      return { top: 64, left: undefined, bottom: undefined, right: 64 };
     case "bottom-left":
-      return { top: undefined, left: 48, bottom: 48, right: undefined };
+      return { top: undefined, left: 64, bottom: 64, right: undefined };
     case "bottom-right":
-      return { top: undefined, left: undefined, bottom: 48, right: 48 };
+      return { top: undefined, left: undefined, bottom: 64, right: 64 };
   }
 };

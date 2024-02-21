@@ -31,6 +31,10 @@ const ChatBot: React.FC<IChatBotCompProps> = (props) => {
     iconBtnStyle,
     inputContainerClassName,
     inputContainerStyle,
+    greetingMessage,
+    sendBtnClassName,
+    sendBtnStyle,
+    inputPlaceHolder,
   } = props;
 
   const [open, setOpen] = useState<boolean>(false);
@@ -68,7 +72,7 @@ const ChatBot: React.FC<IChatBotCompProps> = (props) => {
             AddMessage(
               {
                 me: false,
-                text: "Greeting",
+                text: greetingMessage,
               },
               setMessages
             )
@@ -86,6 +90,12 @@ const ChatBot: React.FC<IChatBotCompProps> = (props) => {
         .finally(() => setTimeout(() => setBotState("offline"), 3500));
     }
   }, [open]);
+
+  const sendWithEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      onSend();
+    }
+  };
 
   return (
     <div style={{ ...IconStyles, ...iconPos }}>
@@ -139,9 +149,15 @@ const ChatBot: React.FC<IChatBotCompProps> = (props) => {
               style={{ ...inputStyle }}
               className={`input ${inputClassName}`}
               onChange={(e) => setMessage(e.target.value)}
+              onKeyDown={sendWithEnter}
+              placeholder={inputPlaceHolder ?? "Message ..."}
             />
-            <button onClick={onSend}>
-              {sendBtnIcon ? sendBtnIcon : "send"}
+            <button
+              className={`send-btn ${sendBtnClassName}`}
+              style={{ ...sendBtnStyle }}
+              onClick={onSend}
+            >
+              {sendBtnIcon ? sendBtnIcon : ">"}
             </button>
           </div>
         </div>
